@@ -10,14 +10,24 @@ public class Exercicio1 {
 
         int[] valores = new int[5];
 
-        for (int i = 0; i < valores.length; i++)
-        {
+        for (int i = 0; i < valores.length; i++) {
             System.out.println("Digite um número inteiro:");
             valores[i] = input.nextInt();
         }
 
-        int maior = valores[0], menor = valores[0];
+        int maiorValor = valores[0], menorValor = valores[0];
 
+        //Utilizando a iteração
+
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] > maiorValor) {
+                maiorValor = valores[i];
+            } else if (valores[i] < maiorValor) {
+                menorValor = valores[i];
+            }
+        }
+
+/* Utilizando o Math.max e Math.min
         for(int max : valores)
         {
             maior = Math.max(maior, max);
@@ -26,9 +36,9 @@ public class Exercicio1 {
         for(int min : valores)
         {
             menor = Math.min(menor, min);
-        }
+        }*/
 
-        System.out.printf("Maior: %d || Menor: %d", maior, menor);
+        System.out.printf("Maior: %d || Menor: %d", maiorValor, menorValor);
 
     }
 }
