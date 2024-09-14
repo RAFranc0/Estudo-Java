@@ -7,8 +7,8 @@ public class Exercicio5 {
         Scanner input = new Scanner(System.in);
 
         int[] temperaturas = new int[7];
-        enum Dias {SEGUNDA, TERÇA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO}
-        int soma = 0, media = 0;
+        enum Dias {SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO}
+        int soma = 0, media;
 
         System.out.println("Digite as temperaturas registradas essa semana, começando na segunda-feira:");
 
@@ -23,7 +23,8 @@ public class Exercicio5 {
 
         System.out.println("\nA média de temperatura foi " + media +"º. Abaixo os dias que ultrapassaram essa média:");
 
-        for(int i = 0; i < temperaturas.length; i++)
+
+    for(int i = 0; i < temperaturas.length; i++)
         {
             if (temperaturas[i] > media)
             {
