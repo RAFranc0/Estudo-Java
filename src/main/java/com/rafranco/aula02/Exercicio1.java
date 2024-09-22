@@ -1,18 +1,16 @@
 package com.rafranco.aula02;
 
-import java.util.Scanner;
+import com.rafranco.utils.ScannerUtils;
 
 public class Exercicio1 {
     public static void main(String[] args) {
         System.out.println("Exercício 1: Leia cinco números inteiros e imprima o maior e o menor números. Cada número da entrada deve ser lido após pressionar 'Enter'.");
 
-        Scanner input = new Scanner(System.in);
-
         int[] valores = new int[5];
 
         for (int i = 0; i < valores.length; i++) {
             System.out.println("Digite um número inteiro:");
-            valores[i] = input.nextInt();
+            valores[i] = ScannerUtils.LerInt();
         }
 
         int maiorValor = valores[0], menorValor = valores[0];

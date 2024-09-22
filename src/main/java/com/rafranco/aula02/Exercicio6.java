@@ -1,5 +1,7 @@
 package com.rafranco.aula02;
 
+import com.rafranco.utils.PrintUtils;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -33,8 +35,8 @@ public class Exercicio6 {
             vetorC[i] = vetorA[i] + vetorB[i];
         }
 
-        System.out.printf("\nVetorC: %s", Arrays.toString(vetorC));
-
+        System.out.printf("\nVetorC: %s\n", Arrays.toString(vetorC));
+        PrintUtils.printSameLine(vetorC);
 
     }
 }
