@@ -1,26 +1,37 @@
 package com.rafranco.aula02;
 
-import java.util.Scanner;
+import com.rafranco.utils.ScannerUtils;
 
 public class Exercicio10 {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
         int centavos;
 
         int[] moedas = {100, 50, 25, 10, 5, 1};
-        int cem, cinquenta, vintecinco, dez, cinco, um;
+        int[] troco = new int[6];
 
         System.out.print("Digite o valor a ser trocado em centavos: ");
-        centavos = input.nextInt();
+        centavos = ScannerUtils.LerInt();
 
-        while(centavos > 0)
+        for (int i = 0; i < moedas.length; i++)
         {
-            for (int moeda : moedas) {
-                while (centavos >= moeda) {
-                    centavos -= moeda;
+            while(centavos > 0)
+            {
+                if (centavos >= moedas[i]){
+
+                    centavos -= moedas[i];
+                    troco[i] += 1;
+                }
+                else
+                {
+                    break;
                 }
             }
+        }
+
+        for (int i = 0; i < moedas.length; i++)
+        {
+            System.out.printf("Moedas de R$%.2f: %d.\n", (double)moedas[i]/100, troco[i]);
         }
     }
 }
