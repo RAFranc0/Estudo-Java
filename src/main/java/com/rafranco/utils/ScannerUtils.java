@@ -5,7 +5,11 @@ package com.rafranco.utils;
 import java.util.Scanner;
 
 public class ScannerUtils {
-    static Scanner input = new Scanner(System.in);
+
+    // in Java, the default access modifier is package-private. in this case, it's the same as protected.
+    // when using Singleton-like classes (like this one), it's better to use private access modifier.
+    // this variable should also be final, as it's a constant.
+    private static final Scanner input = new Scanner(System.in);
 
     public static int LerInt()
     {
