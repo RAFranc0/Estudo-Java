@@ -11,17 +11,17 @@ public class ScannerUtils {
     // this variable should also be final, as it's a constant.
     private static final Scanner input = new Scanner(System.in);
 
-    public static int LerInt()
+    public static int lerInt()
     {
         return input.nextInt();
     }
 
-    public static String LerString()
+    public static String lerString()
     {
         return input.next();
     }
 
-    public static double LerDouble()
+    public static double lerDouble()
     {
         return input.nextDouble();
     }
