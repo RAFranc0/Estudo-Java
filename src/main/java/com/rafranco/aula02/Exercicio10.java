@@ -11,7 +11,7 @@ public class Exercicio10 {
         int[] troco = new int[6];
 
         System.out.print("Digite o valor a ser trocado em centavos: ");
-        centavos = ScannerUtils.LerInt();
+        centavos = ScannerUtils.lerInt();
 
         for (int i = 0; i < moedas.length; i++)
         {

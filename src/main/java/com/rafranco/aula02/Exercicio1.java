@@ -10,7 +10,7 @@ public class Exercicio1 {
 
         for (int i = 0; i < valores.length; i++) {
             System.out.println("Digite um número inteiro:");
-            valores[i] = ScannerUtils.LerInt();
+            valores[i] = ScannerUtils.lerInt();
         }
 
         int maiorValor = valores[0], menorValor = valores[0];
